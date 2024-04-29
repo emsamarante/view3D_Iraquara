@@ -274,7 +274,7 @@ with col2:
         # Carregando a imagem
         img = plt.imread(PATH_INV_INPUT_FILES+'Linha8.png')
         img = np.flipud(img)
-        x_img = np.linspace(0, dfs[index]['X'].max(), img.shape[1])
+        x_img = np.linspace(0, 230, img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
 
