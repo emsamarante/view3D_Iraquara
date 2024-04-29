@@ -33,7 +33,7 @@ for file in files:
 # dfs[6]['Y'] = dfs[6]['Y'] + dy10 # Corrigindo o deslocamento da linha 10
 z_values = dfs[3]['Z'].unique()
 st.set_page_config(layout="wide", page_title="Visão 3D")
-st.title('Visão 3D dos modelos geoelétricos\n')
+st.title('Vista 3D dos modelos geoelétricos\n')
 
 
 # st.sidebar.write("SELECIONE AS SEÇÕES:")
