@@ -79,7 +79,7 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        # ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_1)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_1)
         ax.text(0.5, y_value, 1.1, "CE-01", color='red', fontsize=12, ha='center')
     #
     #
