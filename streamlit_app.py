@@ -74,8 +74,8 @@ with col1:
         y_value = 230
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
         # Carregando a imagem
-        # img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha1.png')
-        # img = np.flipud(img)
+        img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha1.png')
+        img = np.flipud(img)
         # x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         # z_img = np.linspace(min(z), max(z), img.shape[0])
         # X_img, Z_img = np.meshgrid(x_img, z_img)
