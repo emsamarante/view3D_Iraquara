@@ -2,8 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-# from scipy.interpolate import griddata
-# from matplotlib.cbook import get_sample_data
 import streamlit as st
 import os
 
