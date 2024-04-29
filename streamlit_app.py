@@ -38,7 +38,7 @@ st.title('Visão 3D dos modelos geoelétricos\n')
 
 # st.sidebar.write("SELECIONE AS SEÇÕES:")
 
-CE01 = st.sidebar.checkbox('CE-01')
+# CE01 = st.sidebar.checkbox('CE-01')
 CE02 = st.sidebar.checkbox('CE-02')
 CE03 = st.sidebar.checkbox('CE-03')
 CE04 = st.sidebar.checkbox('CE-04')
