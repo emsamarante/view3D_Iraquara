@@ -60,19 +60,16 @@ with col1:
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111, projection='3d')
 
-    index = 0
-    x = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), 20)
-    z = z_values
-    X = dfs[index]['Y']
-    Z = dfs[index]['Z']
-    value = dfs[index]['rho']
-    xi, zi = np.meshgrid(x, z)
-
-
-
-
+    
     ### Adicionando o plot do index =0 na posição apropriada
     if CE01:
+        index = 0
+        x = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), 20)
+        z = z_values
+        X = dfs[index]['Y']
+        Z = dfs[index]['Z']
+        value = dfs[index]['rho']
+        xi, zi = np.meshgrid(x, z)
         alpha_1 = st.sidebar.slider("Transparência CE-01", 0., 1., 0.3)
         y_value = 230
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
