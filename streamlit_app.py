@@ -73,7 +73,7 @@ with col1:
 
     ### Adicionando o plot do index =0 na posição apropriada
     if CE01:
-        alpha = st.sidebar.slider("Transparência CE-01", 0., 1., 0.3)
+        alpha_1 = st.sidebar.slider("Transparência CE-01", 0., 1., 0.3)
         y_value = 230
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
         # Carregando a imagem
@@ -82,14 +82,14 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_1)
         ax.text(0.5, y_value, 1.1, "CE-01", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE02:
-        alpha = st.sidebar.slider("Transparência CE-02", 0., 1., 0.3)
+        alpha_2 = st.sidebar.slider("Transparência CE-02", 0., 1., 0.3)
         index = 1
         y_value = 210
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
@@ -99,14 +99,14 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_2)
         ax.text(0.5, y_value, 1.1, "CE-02", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE03:
-        alpha = st.sidebar.slider("Transparência CE-03", 0., 1., 0.3)
+        alpha_3 = st.sidebar.slider("Transparência CE-03", 0., 1., 0.3)
         index = 2
         y_value = 160
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
@@ -116,14 +116,14 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_3)
         ax.text(0.5, y_value, 1.1, "CE-03", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE04:
-        alpha = st.sidebar.slider("Transparência CE-04", 0., 1., 0.3)
+        alpha_4 = st.sidebar.slider("Transparência CE-04", 0., 1., 0.3)
         index = 3
         y_value = 110
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
@@ -133,14 +133,14 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_4)
         ax.text(0.5, y_value, 1.1, "CE-04", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE05:
-        alpha = st.sidebar.slider("Transparência CE-05", 0., 1., 0.3)
+        alpha_5 = st.sidebar.slider("Transparência CE-05", 0., 1., 0.3)
         index = 4
         y_value = 70
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0.1, color='blue')
@@ -150,41 +150,41 @@ with col1:
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_5)
         ax.text(0.5, y_value, 1.1, "CE-05", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE09:
-        alpha = st.sidebar.slider("Transparência CE-09", 0., 1., 0.3)
+        alpha_9 = st.sidebar.slider("Transparência CE-09", 0., 1., 0.3)
         index = 5
         y_value = 30
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0., color='blue')
-        img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha5.png')
+        img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha9.png')
         img = np.flipud(img)
         # Define as coordenadas da imagem
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_9)
         ax.text(0.5, y_value, 1.1, "CE-09", color='red', fontsize=12, ha='center')
     #
     #
     #
     #
     if CE10:
-        alpha = st.sidebar.slider("Transparência CE-10", 0., 1., 0.3)
+        alpha_10 = st.sidebar.slider("Transparência CE-10", 0., 1., 0.3)
         index = 6
         y_value = 0
         ax.plot_surface(xi, np.full_like(xi, y_value), zi, alpha=0., color='blue')
-        img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha5.png')
+        img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha10.png')
         img = np.flipud(img)
         # Define as coordenadas da imagem
         x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
-        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha)
+        ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_10)
         ax.text(0.5, y_value, 1.1, "CE-10", color='red', fontsize=12, ha='center')
 
 
