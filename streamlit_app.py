@@ -51,7 +51,7 @@ CE10 = st.sidebar.checkbox('CE-10')
 
 col1, col2 = st.columns(2)
 with col1:
-    st.write('**Visão longitudinal**')
+    st.write('**Vista longitudinal**')
 
     Elevacao = st.slider('Elevação', 0, 90, 25)
     Azimute = st.slider('Azimute', 0, 360, 25)
@@ -227,7 +227,7 @@ with col2:
 
 
 
-    st.write("**Visão transversal**")
+    st.write("**Vista transversal**")
 
     Elevacao_lat = st.slider('Elevação_lat', 0, 90, 25)
     Azimute_lat = st.slider('Azimute_lat', 0, 360, 25)
