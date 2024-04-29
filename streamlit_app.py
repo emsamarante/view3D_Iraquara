@@ -60,15 +60,29 @@ with col1:
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111, projection='3d')
 
+    df1 = dfs[0]
+    df2 = dfs[1]
+    df3 = dfs[2]
+    df4 = dfs[3]
+    df5 = dfs[4]
+    df9 = dfs[5]
+    df10 = dfs[6]
+    
+    index=0
+    x = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), 20)
+    z = z_values
+    X = dfs[index]['Y']
+    Z = dfs[index]['Z']
+    xi, zi = np.meshgrid(x, z)
     
     ### Adicionando o plot do index =0 na posição apropriada
     if CE01:
         index = 0
-        x = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), 20)
+        x = np.linspace(df1['Y'].min(), df1['Y'].max(), 20)
         z = z_values
-        X = dfs[index]['Y']
-        Z = dfs[index]['Z']
-        value = dfs[index]['rho']
+        X = df1['Y']
+        Z = df1['Z']
+        value = df1['rho']
         xi, zi = np.meshgrid(x, z)
         alpha_1 = st.sidebar.slider("Transparência CE-01", 0., 1., 0.3)
         y_value = 230
@@ -76,7 +90,7 @@ with col1:
         # Carregando a imagem
         img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha1.png')
         img = np.flipud(img)
-        x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
+        x_img = np.linspace(df1['Y'].min(), df1['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
         ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_1)
@@ -93,7 +107,7 @@ with col1:
         img = plt.imread(PATH_INV_OUTPUT_FILES+'Linha2.png')
         img = np.flipud(img)
 
-        x_img = np.linspace(dfs[index]['Y'].min(), dfs[index]['Y'].max(), img.shape[1])
+        x_img = np.linspace(df2['Y'].min(), df2['Y'].max(), img.shape[1])
         z_img = np.linspace(min(z), max(z), img.shape[0])
         X_img, Z_img = np.meshgrid(x_img, z_img)
         ax.plot_surface(X_img, np.full_like(X_img, y_value), Z_img, facecolors=img, shade=False, alpha=alpha_2)
